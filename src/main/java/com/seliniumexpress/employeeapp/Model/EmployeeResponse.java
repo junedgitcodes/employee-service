@@ -1,7 +1,13 @@
 package com.seliniumexpress.employeeapp.Model;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class EmployeeResponse {
 
@@ -9,42 +15,6 @@ public class EmployeeResponse {
     private String name;
     private String email;
     private String bloodGroup;
+    private AddressResponse addressResponse;
 
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
-    public EmployeeResponse(int id, String name, String email, String bloodGroup) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.bloodGroup = bloodGroup;
-    }
-
-    public EmployeeResponse() {
-    }
 }

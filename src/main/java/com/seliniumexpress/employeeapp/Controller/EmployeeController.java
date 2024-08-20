@@ -17,7 +17,7 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @GetMapping("/employee/{id}")
-    private ResponseEntity<EmployeeResponse> getEmployee(@PathVariable int id) {
+    private ResponseEntity<EmployeeResponse> getEmployee(@PathVariable int id) throws Exception {
         EmployeeResponse employeeResponse = employeeService.getEmployee(id);
         return ResponseEntity.status(HttpStatus.OK).body(employeeResponse);
     }
